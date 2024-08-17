@@ -22,3 +22,6 @@ Para mi el entender y manejar matrices junto con sus operaciones es muy importan
 
 ### Resolución de Sistemas de Ecuaciones:
 Las matrices se utilizan para resolver sistemas de ecuaciones lineales, que aparecen en diversas disciplinas como la economía, la ingeniería y las ciencias sociales.
+Fuentes: https://revistas.udistrital.edu.co/index.php/vinculos/article/view/11660/12869#:~:text=El%20software%20calculador%20de%20matrices,verificar%20si%20una%20matriz%20tiene
+https://es.quora.com/C%C3%B3mo-se-aplican-las-matrices-en-la-vida-real
+https://www.slideshare.net/slideshow/matrices-en-la-vida-cotidiana/123743231
