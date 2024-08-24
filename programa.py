@@ -1,4 +1,4 @@
-# Definición de matrices
+# Definición de matrices a usar
 matriz1 = [
     [1, 2, 3],
     [4, 5, 6],
