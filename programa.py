@@ -1,40 +1,23 @@
 # Definición de matrices a usar
-matriz1 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
 
-matriz2 = [
-    [9, 8, 7],
-    [6, 5, 4],
-    [3, 2, 1]
-]
+def crear_matriz():
+    # Obtener el tamaño de la matriz
+    filas = int(input("Ingresa el número de filas: "))
+    columnas = int(input("Ingresa el número de columnas: "))
 
-def create_matrix():
-    # Get the size of the matrix
-    rows = int(input("Enter the number of rows: "))
-    cols = int(input("Enter the number of columns: "))
+    # Inicializar una matriz vacía
+    matriz = []
 
-    # Initialize an empty matrix
-    matrix = []
-
-    print("Enter the elements row by row:")
-    # Fill the matrix with user input
-    for i in range(rows):
-        row = []
-        for j in range(cols):
-            element = int(input(f"Enter element at position ({i+1}, {j+1}): "))
-            row.append(element)
-        matrix.append(row)
+    print("Ingresa los elementos fila por fila:")
+    # Llenar la matriz con la entrada del usuario
+    for i in range(filas):
+        fila = []
+        for j in range(columnas):
+            elemento = int(input(f"Ingresa el elemento en la posición ({i+1}, {j+1}): "))
+            fila.append(elemento)
+        matriz.append(fila)
     
-    return matrix
-
-# Example usage
-matrix = create_matrix()
-print("Matrix created:")
-for row in matrix:
-    print(row)
+    return matriz
 
 
 #Verificar si el numero de opcion es correcta
@@ -86,30 +69,38 @@ def multiplicar_matrices (matriz_a, matriz_b):
 
 # Mostrar resultados
 #Seleccion de opcion
-print ("Ingrese el numero de opcion de que desee realizar")
-print("\n Opcion 2 = Suma de matrizes \n Opcion 3 = Resta de matrizes \n Opcion 4 = Multiplicacion de matrizes")
-opcion = int(input())
+def menu ():
+    print ("Ingrese el numero de opcion de que desee realizar")
+    print("\n Opcion 2 = Suma de matrizes \n Opcion 3 = Resta de matrizes \n Opcion 4 = Multiplicacion de matrizes")
+    opcion = int(input())
+    
+    print("Ingrese datos para la primera matriz")
+    matriz1 = crear_matriz()
+    print("Ingrese datos para la segundo matriz")
+    matriz2 = crear_matriz()
+    
+    if opcion == 1:
+        opc = int(input())
+        print (verificar_opc(opc))
+    elif opcion == 2:
+        print("Suma de matrices:")
+        for fila in (sumar_matrices(matriz1, matriz2)):
+            print(fila)
+    
+    elif opcion == 3:
+        print("\nResta de matrices:")
+        for fila in (restar_matrices(matriz1, matriz2)):
+            print(fila)
 
-if opcion == 1:
-    opc = int(input())
-    print (verificar_opc(opc))
-elif opcion == 2:
-    print("Suma de matrices:")
-    for fila in (sumar_matrices(matriz1, matriz2)):
-        print(fila)
-  
-elif opcion == 3:
-    print("\nResta de matrices:")
-    for fila in (restar_matrices(matriz1, matriz2)):
-        print(fila)
+    elif opcion == 4:
+        print("\nMultiplicación de matrices:")
+        for fila in (multiplicar_matrices(matriz1, matriz2)):
+            print(fila)
+            
+    else:
+        print ("Opcion no disponible")
 
-elif opcion == 4:
-    print("\nMultiplicación de matrices:")
-    for fila in (multiplicar_matrices(matriz1, matriz2)):
-        print(fila)
-        
-else:
-    print ("Opcion no disponible")
+menu()
     
     
     
