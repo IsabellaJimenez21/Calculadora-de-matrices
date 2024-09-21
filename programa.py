@@ -70,35 +70,40 @@ def multiplicar_matrices (matriz_a, matriz_b):
 # Mostrar resultados
 #Seleccion de opcion
 def menu ():
-    print ("Ingrese el numero de opcion de que desee realizar")
-    print("\n Opcion 2 = Suma de matrizes \n Opcion 3 = Resta de matrizes \n Opcion 4 = Multiplicacion de matrizes")
-    opcion = int(input())
-    
-    print("Ingrese datos para la primera matriz")
-    matriz1 = crear_matriz()
-    print("Ingrese datos para la segundo matriz")
-    matriz2 = crear_matriz()
-    
-    if opcion == 1:
-        opc = int(input())
-        print (verificar_opc(opc))
-    elif opcion == 2:
-        print("Suma de matrices:")
-        for fila in (sumar_matrices(matriz1, matriz2)):
-            print(fila)
-    
-    elif opcion == 3:
-        print("\nResta de matrices:")
-        for fila in (restar_matrices(matriz1, matriz2)):
-            print(fila)
+    while True:
+        print ("Ingrese el numero de opcion de que desee realizar")
+        print("\n Opcion 2 = Suma de matrizes \n Opcion 3 = Resta de matrizes \n Opcion 4 = Multiplicacion de matrizes \n Opcion 5 = Detener")
+        opcion = int(input())
+        
+        if opcion == 5:
+            break
+        
+        print("Ingrese datos para la primera matriz")
+        matriz1 = crear_matriz()
+        print("Ingrese datos para la segundo matriz")
+        matriz2 = crear_matriz()
+        
+        if opcion == 1:
+            opc = int(input())
+            print (verificar_opc(opc))
+        elif opcion == 2:
+            print("Suma de matrices:")
+            for fila in (sumar_matrices(matriz1, matriz2)):
+                print(fila)
+        
+        elif opcion == 3:
+            print("\nResta de matrices:")
+            for fila in (restar_matrices(matriz1, matriz2)):
+                print(fila)
 
-    elif opcion == 4:
-        print("\nMultiplicación de matrices:")
-        for fila in (multiplicar_matrices(matriz1, matriz2)):
-            print(fila)
-            
-    else:
-        print ("Opcion no disponible")
+        elif opcion == 4:
+            print("\nMultiplicación de matrices:")
+            for fila in (multiplicar_matrices(matriz1, matriz2)):
+                print(fila)
+        
+                
+        else:
+            print ("Opcion no disponible")
 
 menu()
     
