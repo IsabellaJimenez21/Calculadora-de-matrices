@@ -52,6 +52,7 @@ def restar_matrices (matriz_a, matriz_b):
         resta_resultado.append(fila)  # Añade la fila completa a la matriz de resultado
     return resta_resultado
 
+
 # Multiplicación de matrices
 def multiplicar_matrices (matriz_a, matriz_b):
     multiplicacion_resultado = []
@@ -66,42 +67,74 @@ def multiplicar_matrices (matriz_a, matriz_b):
     return multiplicacion_resultado
 
 
+def promedio_matriz(matriz):
+    acum = 0
+    cont_num = 0
+    for fila in (matriz):
+        for num in fila:
+            acum = acum + num
+            cont_num = cont_num + 1
+    return acum/cont_num
+    
 
 # Mostrar resultados
 #Seleccion de opcion
 def menu ():
     while True:
         print ("Ingrese el numero de opcion de que desee realizar")
-        print("\n Opcion 2 = Suma de matrizes \n Opcion 3 = Resta de matrizes \n Opcion 4 = Multiplicacion de matrizes \n Opcion 5 = Detener")
+        print("\n Opcion 2 = Suma de matrizes \n Opcion 3 = Resta de matrizes \n Opcion 4 = Multiplicacion de matrizes \n Opcion 5 = Promedio de matriz \n Opcion 6 = Detener")
         opcion = int(input())
         
-        if opcion == 5:
-            break
-        
-        print("Ingrese datos para la primera matriz")
-        matriz1 = crear_matriz()
-        print("Ingrese datos para la segundo matriz")
-        matriz2 = crear_matriz()
         
         if opcion == 1:
+            print("Ingrese datos para la primera matriz")
+            matriz1 = crear_matriz()
+            print("Ingrese datos para la segundo matriz")
+            matriz2 = crear_matriz()
+            
             opc = int(input())
             print (verificar_opc(opc))
+            
         elif opcion == 2:
+            print("Ingrese datos para la primera matriz")
+            matriz1 = crear_matriz()
+            print("Ingrese datos para la segundo matriz")
+            matriz2 = crear_matriz()
+        
             print("Suma de matrices:")
             for fila in (sumar_matrices(matriz1, matriz2)):
                 print(fila)
         
         elif opcion == 3:
+            print("Ingrese datos para la primera matriz")
+            matriz1 = crear_matriz()
+            print("Ingrese datos para la segundo matriz")
+            matriz2 = crear_matriz()
+        
             print("\nResta de matrices:")
             for fila in (restar_matrices(matriz1, matriz2)):
                 print(fila)
 
         elif opcion == 4:
+            print("Ingrese datos para la primera matriz")
+            matriz1 = crear_matriz()
+            print("Ingrese datos para la segundo matriz")
+            matriz2 = crear_matriz()
+        
             print("\nMultiplicación de matrices:")
             for fila in (multiplicar_matrices(matriz1, matriz2)):
                 print(fila)
-        
                 
+        elif opcion == 5:
+            print ("Ingresa datos para tu matriz")
+            matriz = crear_matriz()
+        
+            print ("\nPromedio de matriz:")
+            print (promedio_matriz(matriz))
+                
+        elif opcion == 6:
+            break
+            
         else:
             print ("Opcion no disponible")
 
