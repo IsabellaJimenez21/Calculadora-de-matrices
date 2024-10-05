@@ -1,6 +1,6 @@
 # Calculadora de Matríces
 
-## Conceptos incluido sen el programa
+## Conceptos incluidos en el programa
 Uso de matrices para que los usuarios realicen operaciones aritméticas con ellas, estructuras de control para los menús, ciclos para que el usuario ingrese los datos, realizar las operaciones entre matrices y funciones para separar y hacer reutilizable el código. 
 
 ## ¿Qué son las matrices?
