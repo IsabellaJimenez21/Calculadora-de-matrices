@@ -26,7 +26,8 @@ Para mi el entender y manejar matrices junto con sus operaciones es muy importan
 ### Resolución de Sistemas de Ecuaciones:
 Las matrices se utilizan para resolver sistemas de ecuaciones lineales, que aparecen en diversas disciplinas como la economía, la ingeniería y las ciencias sociales.
 
-Fuentes: Urquijo, H. D. M., & Vargas, L. A. C. (2017). El software calculador de matrices de adyacencia para verificar si una matriz tiene ciclo. Revista Vínculos, 14(1). Recuperado de https://revistas.udistrital.edu.co/index.php/vinculos/article/view/11660/12869
+Fuentes: 
+Urquijo, H. D. M., & Vargas, L. A. C. (2017). El software calculador de matrices de adyacencia para verificar si una matriz tiene ciclo. Revista Vínculos, 14(1). Recuperado de https://revistas.udistrital.edu.co/index.php/vinculos/article/view/11660/12869
 
 Quora. (s. f.). ¿Cómo se aplican las matrices en la vida real? Quora. Recuperado de https://es.quora.com/C%C3%B3mo-se-aplican-las-matrices-en-la-vida-real
 
