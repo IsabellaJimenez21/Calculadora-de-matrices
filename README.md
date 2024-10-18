@@ -56,7 +56,7 @@ Tras realizar la operación, el programa muestra en pantalla la matriz resultant
 Finalmente, el programa pregunta al usuario si desea realizar otra operación o si prefiere salir. Si el usuario decide realizar otra operación, se regresa al menú principal o de inicio, permitiéndo que seleccione otra vez entre las distintas opciones disponibles. Si el usuario elige salir, el programa termina su ejecución y finaliza.
 
 ## Extras
-Un elemento que añadi en el programa fue el uso de try y except, usandolos en la parte de Función para validar opción, los cuales tuve que investigar por mi cuenta. 
+Un elemento que añadí en el programa fue el uso de try y except, usándolos en la parte de Función para validar opción, los cuales tuve que investigar por mi cuenta. 
 El bloque try en Python es utilizado para manejar excepciones, que son errores que ocurren durante la ejecución de un programa. En lugar de permitir que el programa falle abruptamente cuando encuentra un error, el bloque try permite que el programa trate de manejarlo de una forma controlada.
 
 ### ¿Cómo funciona?
