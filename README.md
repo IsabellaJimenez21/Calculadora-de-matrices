@@ -1,7 +1,7 @@
 # Calculadora de Matríces
 
 ## Conceptos incluidos en el programa
-Uso de matrices para que los usuarios realicen operaciones aritméticas con ellas, estructuras de control para los menús, ciclos para que el usuario ingrese los datos, realizar las operaciones entre matrices y funciones para separar y hacer reutilizable el código. 
+Uso de matrices para que los usuarios realicen operaciones aritméticas con ellas, estructuras de control para los menús, ciclos para que el usuario ingrese los datos, realizar las operaciones entre matrices y funciones para separar y hacer reutilizable el código.  
 
 ## ¿Qué son las matrices?
 Las matrices son arreglos bidimensionales de elementos que están en filas y columnas. Son una herramienta fundamental en matemáticas y se utilizan en diferentes áreas como álgebra lineal, física, ingeniería, y ciencias de la computación. En una matriz, cada elemento puede ser identificado por su posición, que se indica mediante un par de índices: el número de fila y el número de columna.
@@ -26,9 +26,11 @@ Para mi el entender y manejar matrices junto con sus operaciones es muy importan
 ### Resolución de Sistemas de Ecuaciones:
 Las matrices se utilizan para resolver sistemas de ecuaciones lineales, que aparecen en diversas disciplinas como la economía, la ingeniería y las ciencias sociales.
 
-Fuentes: https://revistas.udistrital.edu.co/index.php/vinculos/article/view/11660/12869#:~:text=El%20software%20calculador%20de%20matrices,verificar%20si%20una%20matriz%20tiene
-https://es.quora.com/C%C3%B3mo-se-aplican-las-matrices-en-la-vida-real
-https://www.slideshare.net/slideshow/matrices-en-la-vida-cotidiana/123743231
+Fuentes: Urquijo, H. D. M., & Vargas, L. A. C. (2017). El software calculador de matrices de adyacencia para verificar si una matriz tiene ciclo. Revista Vínculos, 14(1). Recuperado de https://revistas.udistrital.edu.co/index.php/vinculos/article/view/11660/12869
+
+Quora. (s. f.). ¿Cómo se aplican las matrices en la vida real? Quora. Recuperado de https://es.quora.com/C%C3%B3mo-se-aplican-las-matrices-en-la-vida-real
+
+Slideshare. (s. f.). Matrices en la vida cotidiana. Slideshare. Recuperado de https://www.slideshare.net/slideshow/matrices-en-la-vida-cotidiana/123743231
 
 
 # Algoritmo 
@@ -52,3 +54,16 @@ Tras realizar la operación, el programa muestra en pantalla la matriz resultant
 
 ## 7. Repetir o Finalizar: 
 Finalmente, el programa pregunta al usuario si desea realizar otra operación o si prefiere salir. Si el usuario decide realizar otra operación, se regresa al menú principal o de inicio, permitiéndo que seleccione otra vez entre las distintas opciones disponibles. Si el usuario elige salir, el programa termina su ejecución y finaliza.
+
+## Extras
+Un elemento que añadi en el programa fue el uso de try y except, usandolos en la parte de Función para validar opción, los cuales tuve que investigar por mi cuenta. 
+El bloque try en Python es utilizado para manejar excepciones, que son errores que ocurren durante la ejecución de un programa. En lugar de permitir que el programa falle abruptamente cuando encuentra un error, el bloque try permite que el programa trate de manejarlo de una forma controlada.
+
+### ¿Cómo funciona?
+1.	try: El código dentro de este bloque se ejecuta normalmente, si no ocurre ningún error, el bloque except se ignora.
+
+2.	except: Si ocurre una excepción en el bloque try, el control del programa se transfiere a este bloque, donde puedes manejar el error. Puedes especificar el tipo de excepción que quieres capturar.
+
+El manejo de excepciones con try en Python es clave para escribir código robusto que pueda responder a errores inesperados sin que el programa se detenga abruptamente.
+
+Fuente: Python Software Foundation. (2023). The Python Language Reference, Section 8. Errors and Exceptions. Python.org. https://docs.python.org/3/tutorial/errors.html

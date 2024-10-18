@@ -1,6 +1,45 @@
-# Definición de matrices a usar
+"""
+Proyecto Python
+Calculadora de matrices.
+El programa funciona como una calculadora que da la opción de sumar, 
+restar y multiplicar dos matrices entre sí,
+además de calcular el promedio de una matriz, las cuales son proporcionadas por un usuario. 
+El programa devuelve el resultado de estas operaciones en una matriz nueva. 
+"""
+"""
+================== Funcion de validar opcion =====================================
+"""
 
+# Verificar si la opción ingresada es un número válido y está en el rango de opciones
+def verificar_opc(opc):
+    """
+    (uso de funciones y de condicionales)
+    recibe: opc como string
+   valida si la opción es un número entero dentro del límite de opciones
+    devuelve: True si la opción es válida, False en caso contrario
+    """
+    try:
+        opc = int(opc)  # Intentar convertir a entero
+    except ValueError:
+        print("Eso no es un número. Por favor, ingrese una opción válida.")
+        return False
+
+    if opc in [1, 2, 3, 4, 5]:
+        print("Opción disponible, puede ingresar esa opción.")
+        return True
+    else:
+        print("Esa opción no existe, ingrese una nueva.")
+        return False
+"""
+================== Función de definir matrices  =====================================
+"""
 def crear_matriz():
+    """
+    (uso de funciones, listas anidadas, ciclos y ciclos anidados)
+    recibe: filas valor numérico, columnas valor numérico
+    crea una matriz
+    devuelve: una matriz con valores, número de filas y columnas proporcionados por el usuario
+    """
     # Obtener el tamaño de la matriz
     filas = int(input("Ingresa el número de filas: "))
     columnas = int(input("Ingresa el número de columnas: "))
@@ -18,56 +57,89 @@ def crear_matriz():
         matriz.append(fila)
     
     return matriz
-
-
-#Verificar si el numero de opcion es correcta
-def verificar_opc(opc):
-    if opc <= 0:
-        opc = "Esa opcion no existe, ingrese una nueva"
-    else:
-        opc = "Opcion disponible, puede ingrsar esa opcion"
-    return opc
     
+"""
+================== Funciones de operaciones  =====================================
+"""
     
 # Suma de matrices
 def sumar_matrices (matriz_a, matriz_b):
-    suma_resultado = [] 
-    for i in range(len(matriz_a)):  # Recorre las filas de la matriz
+    """
+    (uso de operadores, funciones, listas anidadas, ciclos y ciclos anidados)
+    recibe: matriz_a lista anidada, matriz_b lista anidada
+    suma dos matrices
+    devuelve: el resultado de la suma en una nueva matriz
+    """
+    suma_resultado = []  
+    # Recorre las filas de la matriz
+    for i in range(len(matriz_a)):  
         fila = []
-        for j in range(len(matriz_a[i])):  # Recorre las columnas de la matriz
-            suma = matriz_a[i][j] + matriz_b[i][j]  # Suma los elementos correspondientes
-            fila.append(suma)  # Añade el resultado a la fila
-        suma_resultado.append(fila) # Añade la fila completa a la matriz de resultado
+        # Recorre las columnas de la matriz
+        for j in range(len(matriz_a[i])):  
+            # Suma los elementos correspondientes
+            suma = matriz_a[i][j] + matriz_b[i][j]  
+            # Añade el resultado a la fila
+            fila.append(suma)  
+        # Añade la fila completa a la matriz de resultado
+        suma_resultado.append(fila) 
     return suma_resultado
 
 
 # Resta de matrices
 def restar_matrices (matriz_a, matriz_b):
+    """
+    (uso de operadores, funciones, listas anidadas, ciclos y ciclos anidados)
+    recibe: matriz_a lista anidada, matriz_b lista anidada
+    resta dos matrices
+    devuelve: el resultado de la resta en una nueva matriz
+    """
     resta_resultado = []
-    for i in range(len(matriz_a)):  # Recorre las filas de la matriz
+    # Recorre las filas de la matriz
+    for i in range(len(matriz_a)):  
         fila = []
-        for j in range(len(matriz_a[i])):  # Recorre las columnas de la matriz
-            resta = matriz_a[i][j] - matriz_b[i][j]  # Resta los elementos correspondientes
-            fila.append(resta)  # Añade el resultado a la fila
-        resta_resultado.append(fila)  # Añade la fila completa a la matriz de resultado
+        # Recorre las columnas de la matriz
+        for j in range(len(matriz_a[i])):
+            # Resta los elementos correspondientes
+            resta = matriz_a[i][j] - matriz_b[i][j]  
+            # Añade el resultado a la fila
+            fila.append(resta)  
+        # Añade la fila completa a la matriz de resultado
+        resta_resultado.append(fila)  
     return resta_resultado
 
 
 # Multiplicación de matrices
 def multiplicar_matrices (matriz_a, matriz_b):
+    """
+    (uso de operadores, funciones, listas anidadas, ciclos y ciclos anidados)
+    recibe: matriz_a lista anidada, matriz_b lista anidada
+    multiplica dos matrices
+    devuelve: el resultado de la multiplicación en una nueva matriz
+    """
     multiplicacion_resultado = []
-    for i in range(len(matriz_a)):  # Recorre las filas de la primera matriz
+    # Recorre las filas de la primera matriz
+    for i in range(len(matriz_a)):  
         fila = []
-        for j in range(len(matriz_b[0])):  # Recorre las columnas de la segunda matriz
+        # Recorre las columnas de la segunda matriz
+        for j in range(len(matriz_b[0])):  
             suma = 0
-            for k in range(len(matriz_a[0])):  # Realiza la multiplicación de elementos y suma
+            # Realiza la multiplicación de elementos y suma
+            for k in range(len(matriz_a[0])):  
                 suma += matriz_a[i][k] * matriz_b[k][j]
-            fila.append(suma)  # Añade el resultado a la fila
-        multiplicacion_resultado.append(fila)  # Añade la fila completa a la matriz de resultado
+            # Añade el resultado a la fila
+            fila.append(suma)
+        # Añade la fila completa a la matriz de resultado
+        multiplicacion_resultado.append(fila) 
     return multiplicacion_resultado
 
 
 def promedio_matriz(matriz):
+    """
+    (uso de operadores, funciones, listas anidadas, ciclos y ciclos anidados)
+    recibe: matriz lista anidada
+    calcula el promedio de una matriz
+    devuelve: el resultado del promedio de una matriz en valor numérico
+    """
     acum = 0
     cont_num = 0
     for fila in (matriz):
@@ -76,67 +148,77 @@ def promedio_matriz(matriz):
             cont_num = cont_num + 1
     return acum/cont_num
     
+"""
+================== Funcion de opciones  =====================================
+"""
 
 # Mostrar resultados
 #Seleccion de opcion
 def menu ():
+    """
+    (funciones, condicionales, ciclos y ciclos anidados)
+    recibe: opcion valor numerico
+    dependiendo la opcion seleccionada ejecuta la operacion correspondiente
+    devuelve: el resultado de la operación seleccionada
+    """
     while True:
-        print ("Ingrese el numero de opcion de que desee realizar")
-        print("\n Opcion 2 = Suma de matrizes \n Opcion 3 = Resta de matrizes \n Opcion 4 = Multiplicacion de matrizes \n Opcion 5 = Promedio de matriz \n Opcion 6 = Detener")
-        opcion = int(input())
+        print ("Ingrese el número de opción que desee realizar")
+        print("Opción 1 = Suma de matrizes \nOpción 2 = Resta de matrizes")
+        print ("Opción 3 = Multiplicación de matrizes \nOpción 4 = Promedio de matriz \nOpción 5 = Detener")     
+       
+        # Mantener como string para validar
+        opcion = input()  
+
+        # Validar opción antes de continuar
+        if  not verificar_opc(opcion):
+            continue
+
+        # Convertir la opción validada a entero
+        opcion = int(opcion)
         
-        
+  
         if opcion == 1:
             print("Ingrese datos para la primera matriz")
-            matriz1 = crear_matriz()
-            print("Ingrese datos para la segundo matriz")
-            matriz2 = crear_matriz()
-            
-            opc = int(input())
-            print (verificar_opc(opc))
-            
-        elif opcion == 2:
-            print("Ingrese datos para la primera matriz")
-            matriz1 = crear_matriz()
-            print("Ingrese datos para la segundo matriz")
-            matriz2 = crear_matriz()
+            matriz_1 = crear_matriz()
+            print("Ingrese datos para la segunda matriz")
+            matriz_2 = crear_matriz()
         
             print("Suma de matrices:")
-            for fila in (sumar_matrices(matriz1, matriz2)):
+            for fila in (sumar_matrices(matriz_1, matriz_2)):
                 print(fila)
         
-        elif opcion == 3:
+        elif opcion == 2:
             print("Ingrese datos para la primera matriz")
-            matriz1 = crear_matriz()
-            print("Ingrese datos para la segundo matriz")
-            matriz2 = crear_matriz()
+            matriz_1 = crear_matriz()
+            print("Ingrese datos para la segunda matriz")
+            matriz_2 = crear_matriz()
         
             print("\nResta de matrices:")
-            for fila in (restar_matrices(matriz1, matriz2)):
+            for fila in (restar_matrices(matriz_1, matriz_2)):
                 print(fila)
 
-        elif opcion == 4:
+        elif opcion == 3:
             print("Ingrese datos para la primera matriz")
-            matriz1 = crear_matriz()
-            print("Ingrese datos para la segundo matriz")
-            matriz2 = crear_matriz()
+            matriz_1 = crear_matriz()
+            print("Ingrese datos para la segunda matriz")
+            matriz_2 = crear_matriz()
         
             print("\nMultiplicación de matrices:")
-            for fila in (multiplicar_matrices(matriz1, matriz2)):
+            for fila in (multiplicar_matrices(matriz_1, matriz_2)):
                 print(fila)
                 
-        elif opcion == 5:
+        elif opcion == 4:
             print ("Ingresa datos para tu matriz")
             matriz = crear_matriz()
         
             print ("\nPromedio de matriz:")
             print (promedio_matriz(matriz))
-                
-        elif opcion == 6:
+        # Opcion para detener el programa        
+        elif opcion == 5:
             break
             
         else:
-            print ("Opcion no disponible")
+            print ("Opción no disponible")
 
 menu()
     
